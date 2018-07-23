@@ -1,6 +1,7 @@
 package com.flameshot.sharedpreference;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,11 +11,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.SortedSet;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText addString;
     String buffer;
     SharedPreferences pref;
+    static public SortedSet<String> sSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,name,Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    public void next(View view)
+    {
+        Intent intent = new Intent(this, TaskList.class);
+        startActivity(intent);
     }
 
     public void get(View view)
