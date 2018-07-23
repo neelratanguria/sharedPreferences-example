@@ -134,7 +134,7 @@ public class TaskList extends AppCompatActivity {
         MainActivity.sSet.add("how");
         MainActivity.sSet.add("ru");
 
-        String[] toArray = new String[10];
+        String[] toArray = new String[4];
 
         int i = 0;
 
